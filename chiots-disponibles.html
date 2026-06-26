@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiots Disponibles — Pomsky, Pomeranian, Husky — Élevage des Cimes Blanches</title>
+  <meta name="description" content="Chiots disponibles à l'adoption : Pomsky, Pomeranian et Husky sibérien à Sierre, Valais. Pedigree FCI, vaccinés, pucés, prêts à partir.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .filter-race { display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:2.5rem; }
+    .filter-race button { padding:0.45rem 1.1rem; font-family:var(--sans); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; border:1px solid var(--gris-clair); border-radius:20px; background:transparent; color:var(--gris); cursor:pointer; transition:all 0.2s; }
+    .filter-race button.active, .filter-race button:hover { border-color:var(--or); color:var(--or); }
+    .chiot-detail-list { list-style:none; margin:0.6rem 0 1rem; }
+    .chiot-detail-list li { font-size:0.82rem; color:var(--gris); padding:0.25rem 0; display:flex; gap:0.5rem; }
+    .chiot-detail-list li::before { content:'—'; color:var(--or); flex-shrink:0; }
+    .cta-block { background:linear-gradient(135deg,#F8F3E8,#F0EDE6); border:1px solid rgba(201,168,76,0.2); border-radius:var(--radius); padding:3rem; text-align:center; margin-top:4rem; }
+    .cta-block h3 { font-family:var(--serif); font-size:1.6rem; font-weight:300; margin-bottom:0.8rem; }
+    .cta-block p { color:var(--gris); font-size:0.95rem; margin-bottom:1.8rem; }
+    @media(max-width:600px){ .chiot-card__meta { flex-direction:column; gap:0.2rem; } }
+  </style>
+  <link rel="alternate" hreflang="fr" href="chiots-disponibles.html">
+  <link rel="alternate" hreflang="en" href="en/puppies-available.html">
+  <link rel="alternate" hreflang="x-default" href="chiots-disponibles.html">
+</head>
+<body>
+<div class="progress-bar"></div>
+<nav class="nav"><a href="index.html" class="nav__logo">Élevage des Cimes Blanches<span>Sierre · Valais · Suisse</span></a><ul class="nav__links"><li><a href="elevage.html">L'élevage</a></li><li><a href="races-pomsky.html">Les races</a></li><li><a href="chiots-disponibles.html">Chiots dispos</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="conseils.html">Conseils</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html" class="nav__cta">Nous contacter</a></li></ul><style>.lang-switcher{display:flex;align-items:center;gap:0.4rem;margin-left:1.2rem;font-size:0.72rem;letter-spacing:0.08em}.lang-switcher a{padding:0.25rem 0.5rem;border-radius:4px;text-decoration:none;color:var(--gris);transition:all 0.2s}.lang-switcher a.active,.lang-switcher a:hover{color:var(--or);font-weight:600}.lang-switcher span{color:var(--gris-clair)}@media(max-width:1024px){.lang-switcher{display:none}}</style><div class="lang-switcher"><a href="chiots-disponibles.html" class="active">FR</a><span>|</span><a href="en/puppies-available.html">EN</a></div><button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button></nav>
+<div class="nav__mobile"><button class="nav__mobile__close">✕</button><a href="elevage.html">L'élevage</a><a href="races-pomsky.html">Les races</a><a href="chiots-disponibles.html">Chiots disponibles</a><a href="galerie.html">Galerie</a><a href="conseils.html">Conseils</a><a href="faq.html">FAQ</a><a href="temoignages.html">Témoignages</a><a href="contact.html">Contact</a><style>.nav__mobile .lang-mobile{display:flex;gap:1rem;padding:1.2rem 1.5rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:auto}.nav__mobile .lang-mobile a{font-size:0.85rem;color:rgba(255,255,255,0.6);text-decoration:none;letter-spacing:0.1em}.nav__mobile .lang-mobile a.active{color:var(--or);font-weight:600}</style><div class="lang-mobile"><a href="chiots-disponibles.html" class="active">🇫🇷 Français</a><a href="en/puppies-available.html">🇬🇧 English</a></div>
+</div>
+
+<div class="page-hero">
+  <p class="page-hero__label">À adopter maintenant</p>
+  <h1 class="page-hero__title">Chiots <em style="font-style:italic;color:var(--or)">disponibles</em></h1>
+  <p class="page-hero__desc">Chaque chiot repart avec pedigree FCI, carnet de santé, vaccins, puce électronique et kit de bienvenue.</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-race reveal">
+      <button class="active" data-race="tous">Tous</button>
+      <button data-race="pomsky">Pomsky</button>
+      <button data-race="pomeranian">Pomeranian</button>
+      <button data-race="husky">Husky</button>
+      <button data-race="disponible">🟢 Disponibles uniquement</button>
+    </div>
+
+    <div class="chiots-grid reveal">
+      <!-- Luna -->
+      <div class="chiot-card" data-race="pomsky" data-statut="disponible">
+        <div class="chiot-card__img"><img src="images/chiot-luna-pomsky.svg" alt="Luna — Femelle Pomsky disponible à l'adoption" loading="lazy"></div>
+        <div class="chiot-card__body">
+          <span class="chiot-card__badge badge--dispo">Disponible</span>
+          <h2 class="chiot-card__name">Luna</h2>
+          <div class="chiot-card__meta"><span>Pomsky F1 · Femelle</span><span>12 semaines</span></div>
+          <ul class="chiot-detail-list">
+            <li>Robe argent et blanc, yeux bicolores</li>
+            <li>Vaccins DHPPiL, puce CH, vermifugée</li>
+            <li>Pedigree FCI · Parents testés</li>
+            <li>Disponible immédiatement</li>
+          </ul>
+          <div class="chiot-card__price">CHF 2'900</div>
+          <a href="contact.html?sujet=reservation&chiot=Luna" class="btn-primary" style="margin-top:1rem;width:100%;justify-content:center;font-size:0.72rem">Réserver Luna →</a>
+        </div>
+      </div>
+
+      <!-- Storm -->
+      <div class="chiot-card" data-race="pomsky" data-statut="disponible">
+        <div class="chiot-card__img"><img src="images/chiot-storm-pomsky.svg" alt="Storm — Mâle Pomsky disponible à l'adoption" loading="lazy"></div>
+        <div class="chiot-card__body">
+          <span class="chiot-card__badge badge--dispo">Disponible</span>
+          <h2 class="chiot-card__name">Storm</h2>
+          <div class="chiot-card__meta"><span>Pomsky F1 · Mâle</span><span>12 semaines</span></div>
+          <ul class="chiot-detail-list">
+            <li>Robe gris charcoal et blanc, yeux bleus</li>
+            <li>Vaccins DHPPiL, puce CH, vermifugé</li>
+            <li>Pedigree FCI · Parents testés</li>
+            <li>Disponible immédiatement</li>
+          </ul>
+          <div class="chiot-card__price">CHF 2'800</div>
+          <a href="contact.html" class="btn-primary" style="margin-top:1rem;width:100%;justify-content:center;font-size:0.72rem">Réserver Storm →</a>
+        </div>
+      </div>
+
+      <!-- Neva -->
+      <div class="chiot-card" data-race="pomeranian" data-statut="reserve">
+        <div class="chiot-card__img"><img src="images/chiot-neva-pomeranian.svg" alt="Neva — Femelle Pomeranian réservée" loading="lazy"></div>
+        <div class="chiot-card__body">
+          <span class="chiot-card__badge badge--reserve">Réservée</span>
+          <h2 class="chiot-card__name">Neva</h2>
+          <div class="chiot-card__meta"><span>Pomeranian · Femelle</span><span>10 semaines</span></div>
+          <ul class="chiot-detail-list">
+            <li>Robe orange sable, yeux ambrés</li>
+            <li>Vaccins DHPPiL, puce CH, vermifugée</li>
+            <li>Pedigree FCI · Lignée championne</li>
+          </ul>
+          <div class="chiot-card__price">CHF 2'500</div>
+          <a href="contact.html" class="btn-secondary" style="margin-top:1rem;width:100%;justify-content:center;font-size:0.72rem">Liste d'attente</a>
+        </div>
+      </div>
+
+      <!-- Arctic -->
+      <div class="chiot-card" data-race="husky" data-statut="disponible">
+        <div class="chiot-card__img"><img src="images/race-husky-portrait.svg" alt="Arctic — Mâle Husky sibérien disponible" loading="lazy"></div>
+        <div class="chiot-card__body">
+          <span class="chiot-card__badge badge--dispo">Disponible</span>
+          <h2 class="chiot-card__name">Arctic</h2>
+          <div class="chiot-card__meta"><span>Husky Sibérien · Mâle</span><span>10 semaines</span></div>
+          <ul class="chiot-detail-list">
+            <li>Robe noir et blanc, yeux bleus glace</li>
+            <li>Vaccins DHPPiL, puce CH, vermifugé</li>
+            <li>Pedigree FCI · Père champion Suisse</li>
+            <li>Disponible mi-mars 2025</li>
+          </ul>
+          <div class="chiot-card__price">CHF 2'200</div>
+          <a href="contact.html" class="btn-primary" style="margin-top:1rem;width:100%;justify-content:center;font-size:0.72rem">Réserver Arctic →</a>
+        </div>
+      </div>
+
+      <!-- Cannelle -->
+      <div class="chiot-card" data-race="pomeranian" data-statut="reserve">
+        <div class="chiot-card__img"><img src="images/race-pomeranian-portrait.svg" alt="Cannelle — Femelle Pomeranian réservée" loading="lazy"></div>
+        <div class="chiot-card__body">
+          <span class="chiot-card__badge badge--reserve">Réservée</span>
+          <h2 class="chiot-card__name">Cannelle</h2>
+          <div class="chiot-card__meta"><span>Pomeranian · Femelle</span><span>8 semaines</span></div>
+          <ul class="chiot-detail-list">
+            <li>Robe crème vanille, très rare</li>
+            <li>Vaccins DHPPiL, puce CH, vermifugée</li>
+            <li>Pedigree FCI</li>
+          </ul>
+          <div class="chiot-card__price">CHF 2'800</div>
+          <a href="contact.html" class="btn-secondary" style="margin-top:1rem;width:100%;justify-content:center;font-size:0.72rem">Liste d'attente</a>
+        </div>
+      </div>
+
+      <!-- Blizzard F2 -->
+      <div class="chiot-card" data-race="pomsky" data-statut="disponible">
+        <div class="chiot-card__img"><img src="images/pomsky-adulte-assis.svg" alt="Blizzard — Mâle Pomsky F2 disponible" loading="lazy"></div>
+        <div class="chiot-card__body">
+          <span class="chiot-card__badge badge--dispo">Disponible</span>
+          <h2 class="chiot-card__name">Blizzard</h2>
+          <div class="chiot-card__meta"><span>Pomsky F2 · Mâle</span><span>9 semaines</span></div>
+          <ul class="chiot-detail-list">
+            <li>Robe blanche pure, yeux bleu ciel</li>
+            <li>Vaccins DHPPiL, puce CH, vermifugé</li>
+            <li>Pedigree FCI · Taille adulte ~8kg</li>
+            <li>Idéal appartement</li>
+          </ul>
+          <div class="chiot-card__price">CHF 3'100</div>
+          <a href="contact.html" class="btn-primary" style="margin-top:1rem;width:100%;justify-content:center;font-size:0.72rem">Réserver Blizzard →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-block reveal">
+      <h3>Vous ne trouvez pas votre futur compagnon ?</h3>
+      <p>Inscrivez-vous sur notre liste d'attente — nous vous contactons en priorité dès qu'un chiot correspondant à vos critères est disponible.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn-primary">S'inscrire sur liste d'attente →</a>
+        <a href="adoption.html" class="btn-secondary">Processus d'adoption</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tinted">
+  <div class="container" style="text-align:center">
+    <p class="section__label reveal" style="justify-content:center">Inclus dans chaque adoption</p>
+    <h2 class="section__title reveal">Le kit de départ des Cimes Blanches</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2.5rem;text-align:left" class="reveal">
+      <div style="padding:1.5rem;background:white;border-radius:var(--radius)"><div style="font-size:1.5rem;margin-bottom:0.6rem">📋</div><strong style="font-size:0.9rem">Pedigree FCI</strong><p style="font-size:0.82rem;color:var(--gris);margin-top:0.4rem">Certificat de naissance officiel, lignée vérifiable</p></div>
+      <div style="padding:1.5rem;background:white;border-radius:var(--radius)"><div style="font-size:1.5rem;margin-bottom:0.6rem">💉</div><strong style="font-size:0.9rem">Carnet de santé</strong><p style="font-size:0.82rem;color:var(--gris);margin-top:0.4rem">Vaccins DHPPiL, vermifuge, antiparasitaire</p></div>
+      <div style="padding:1.5rem;background:white;border-radius:var(--radius)"><div style="font-size:1.5rem;margin-bottom:0.6rem">📡</div><strong style="font-size:0.9rem">Puce AMICUS</strong><p style="font-size:0.82rem;color:var(--gris);margin-top:0.4rem">Enregistrement base nationale suisse inclus</p></div>
+      <div style="padding:1.5rem;background:white;border-radius:var(--radius)"><div style="font-size:1.5rem;margin-bottom:0.6rem">🧸</div><strong style="font-size:0.9rem">Trousseau</strong><p style="font-size:0.82rem;color:var(--gris);margin-top:0.4rem">Couverture odeur, jouet, croquettes transition</p></div>
+      <div style="padding:1.5rem;background:white;border-radius:var(--radius)"><div style="font-size:1.5rem;margin-bottom:0.6rem">📞</div><strong style="font-size:0.9rem">Suivi 12 mois</strong><p style="font-size:0.82rem;color:var(--gris);margin-top:0.4rem">WhatsApp 7j/7 la première année</p></div>
+      <div style="padding:1.5rem;background:white;border-radius:var(--radius)"><div style="font-size:1.5rem;margin-bottom:0.6rem">📄</div><strong style="font-size:0.9rem">Contrat d'adoption</strong><p style="font-size:0.82rem;color:var(--gris);margin-top:0.4rem">Garantie génétique 2 ans incluse</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="nav__logo">Élevage des Cimes Blanches<span>Sierre · Valais · Suisse</span></div><p>Élevage familial de Pomsky, Pomeranian et Husky sibérien dans les Alpes valaisannes.</p></div><div class="footer-col"><h4>L'élevage</h4><ul><li><a href="elevage.html">Notre histoire</a></li><li><a href="races-pomsky.html">Le Pomsky</a></li><li><a href="races-pomeranian.html">Le Pomeranian</a></li><li><a href="races-husky.html">Le Husky</a></li></ul></div><div class="footer-col"><h4>Informations</h4><ul><li><a href="chiots-disponibles.html">Chiots disponibles</a></li><li><a href="adoption.html">Processus d'adoption</a></li><li><a href="faq.html">FAQ</a></li><li><a href="temoignages.html">Témoignages</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Nous écrire</a></li><li><a href="mailto:contact@cimesblanches.ch">contact@cimesblanches.ch</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 Élevage des Cimes Blanches · Sierre, Valais</span><span>Site par <a href="https://goodwebsites.ch" style="color:var(--or)">GoodWebsites.ch</a></span></div></div></footer>
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('.filter-race button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-race button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const race = btn.dataset.race;
+    document.querySelectorAll('.chiot-card').forEach(card => {
+      if (race === 'tous') { card.style.display = ''; return; }
+      if (race === 'disponible') { card.style.display = card.dataset.statut === 'disponible' ? '' : 'none'; return; }
+      card.style.display = card.dataset.race === race ? '' : 'none';
+    });
+  });
+});
+</script>
+</body></html>

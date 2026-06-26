@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Témoignages — Familles heureuses — Élevage des Cimes Blanches</title>
+  <meta name="description" content="Avis et témoignages des familles ayant adopté un Pomsky, Pomeranian ou Husky à l'Élevage des Cimes Blanches, Sierre Valais.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .temoignages-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; margin-top:3rem; }
+    .temoignage-full-card { background:white; border:1px solid var(--gris-clair); border-radius:var(--radius); padding:2rem; position:relative; transition:box-shadow 0.3s; }
+    .temoignage-full-card:hover { box-shadow:0 12px 40px rgba(26,26,24,0.08); }
+    .temoignage-full-card__stars { color:var(--or); font-size:1rem; margin-bottom:1rem; letter-spacing:0.1em; }
+    .temoignage-full-card__text { font-family:var(--serif); font-size:1.05rem; font-weight:300; font-style:italic; line-height:1.7; color:var(--noir); margin-bottom:1.5rem; }
+    .temoignage-full-card__footer { display:flex; align-items:center; gap:1rem; padding-top:1rem; border-top:1px solid var(--gris-clair); }
+    .temoignage-full-card__avatar { width:42px; height:42px; border-radius:50%; background:var(--gris-clair); display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+    .temoignage-full-card__info strong { display:block; font-size:0.85rem; font-weight:500; color:var(--noir); }
+    .temoignage-full-card__info span { font-size:0.78rem; color:var(--gris); }
+    .temoignage-full-card__race { position:absolute; top:1.2rem; right:1.2rem; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--or); background:rgba(201,168,76,0.1); padding:0.2rem 0.6rem; border-radius:10px; }
+    @media(max-width:600px){ .temoignages-grid{grid-template-columns:1fr} }
+  </style>
+  <link rel="alternate" hreflang="fr" href="temoignages.html">
+  <link rel="alternate" hreflang="en" href="en/testimonials.html">
+  <link rel="alternate" hreflang="x-default" href="temoignages.html">
+</head>
+<body>
+<div class="progress-bar"></div>
+<nav class="nav"><a href="index.html" class="nav__logo">Élevage des Cimes Blanches<span>Sierre · Valais · Suisse</span></a><ul class="nav__links"><li><a href="elevage.html">L'élevage</a></li><li><a href="races-pomsky.html">Les races</a></li><li><a href="chiots-disponibles.html">Chiots dispos</a></li><li><a href="galerie.html">Galerie</a></li><li><a href="conseils.html">Conseils</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html" class="nav__cta">Nous contacter</a></li></ul><style>.lang-switcher{display:flex;align-items:center;gap:0.4rem;margin-left:1.2rem;font-size:0.72rem;letter-spacing:0.08em}.lang-switcher a{padding:0.25rem 0.5rem;border-radius:4px;text-decoration:none;color:var(--gris);transition:all 0.2s}.lang-switcher a.active,.lang-switcher a:hover{color:var(--or);font-weight:600}.lang-switcher span{color:var(--gris-clair)}@media(max-width:1024px){.lang-switcher{display:none}}</style><div class="lang-switcher"><a href="temoignages.html" class="active">FR</a><span>|</span><a href="en/testimonials.html">EN</a></div><button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button></nav>
+<div class="nav__mobile"><button class="nav__mobile__close">✕</button><a href="elevage.html">L'élevage</a><a href="races-pomsky.html">Les races</a><a href="chiots-disponibles.html">Chiots disponibles</a><a href="galerie.html">Galerie</a><a href="conseils.html">Conseils</a><a href="faq.html">FAQ</a><a href="temoignages.html">Témoignages</a><a href="contact.html">Contact</a><style>.nav__mobile .lang-mobile{display:flex;gap:1rem;padding:1.2rem 1.5rem;border-top:1px solid rgba(255,255,255,0.1);margin-top:auto}.nav__mobile .lang-mobile a{font-size:0.85rem;color:rgba(255,255,255,0.6);text-decoration:none;letter-spacing:0.1em}.nav__mobile .lang-mobile a.active{color:var(--or);font-weight:600}</style><div class="lang-mobile"><a href="temoignages.html" class="active">🇫🇷 Français</a><a href="en/testimonials.html">🇬🇧 English</a></div>
+</div>
+
+<div class="page-hero">
+  <p class="page-hero__label">Ils nous font confiance</p>
+  <h1 class="page-hero__title">Familles <em style="font-style:italic;color:var(--or)">heureuses</em></h1>
+  <p class="page-hero__desc">Plus de 200 familles ont adopté un chiot des Cimes Blanches. Quelques-unes ont pris la plume pour nous.</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="stats-row reveal">
+      <div class="stat-item"><div class="stat-item__number">200+</div><div class="stat-item__label">Adoptions réussies</div></div>
+      <div class="stat-item"><div class="stat-item__number">4.9/5</div><div class="stat-item__label">Note moyenne</div></div>
+      <div class="stat-item"><div class="stat-item__number">10+</div><div class="stat-item__label">Années d'expérience</div></div>
+      <div class="stat-item"><div class="stat-item__number">CH · FR</div><div class="stat-item__label">Familles en Suisse & France</div></div>
+    </div>
+
+    <div class="temoignages-grid reveal">
+      <div class="temoignage-full-card">
+        <span class="temoignage-full-card__race">Pomsky</span>
+        <div class="temoignage-full-card__stars">★★★★★</div>
+        <p class="temoignage-full-card__text">"Notre Pomsky Milo a transformé notre quotidien. L'élevage nous a accompagnés avec une bienveillance rare — et le petit était socialisé à la perfection à son arrivée. On a posé 100 questions idiotes, chaque réponse était patiente et précise."</p>
+        <div class="temoignage-full-card__footer">
+          <div class="temoignage-full-card__avatar">👨‍👩‍👦</div>
+          <div class="temoignage-full-card__info"><strong>Sophie & Marc T.</strong><span>Genève · Milo, Pomsky mâle F1</span></div>
+        </div>
+      </div>
+
+      <div class="temoignage-full-card">
+        <span class="temoignage-full-card__race">Pomeranian</span>
+        <div class="temoignage-full-card__stars">★★★★★</div>
+        <p class="temoignage-full-card__text">"Un élevage d'un sérieux absolu. Les parents sont présents, les conditions impeccables, et le suivi après adoption est exceptionnel. Notre Pomeranian Cannelle est un trésor. Un an plus tard, je recommande sans hésitation."</p>
+        <div class="temoignage-full-card__footer">
+          <div class="temoignage-full-card__avatar">👩</div>
+          <div class="temoignage-full-card__info"><strong>Isabelle R.</strong><span>Lausanne · Cannelle, Pomeranian femelle</span></div>
+        </div>
+      </div>
+
+      <div class="temoignage-full-card">
+        <span class="temoignage-full-card__race">Husky</span>
+        <div class="temoignage-full-card__stars">★★★★★</div>
+        <p class="temoignage-full-card__text">"On a attendu six mois pour avoir notre Husky Arctic — ça valait chaque jour d'attente. Un chiot équilibré, en pleine santé, avec un tempérament magnifique. Les enfants sont fous de lui."</p>
+        <div class="temoignage-full-card__footer">
+          <div class="temoignage-full-card__avatar">👨‍👩‍👧‍👦</div>
+          <div class="temoignage-full-card__info"><strong>Famille Zimmermann</strong><span>Crans-Montana · Arctic, Husky mâle</span></div>
+        </div>
+      </div>
+
+      <div class="temoignage-full-card">
+        <span class="temoignage-full-card__race">Pomsky</span>
+        <div class="temoignage-full-card__stars">★★★★★</div>
+        <p class="temoignage-full-card__text">"Ce qui m'a touché, c'est l'amour sincère que l'éleveuse porte à ses chiens. On sentait qu'elle confiait quelque chose de précieux. Zara est arrivée déjà habituée aux bruits, aux enfants, à l'aspirateur — un travail de fond remarquable."</p>
+        <div class="temoignage-full-card__footer">
+          <div class="temoignage-full-card__avatar">👨</div>
+          <div class="temoignage-full-card__info"><strong>David L.</strong><span>Sion · Zara, Pomsky femelle</span></div>
+        </div>
+      </div>
+
+      <div class="temoignage-full-card">
+        <span class="temoignage-full-card__race">Pomeranian</span>
+        <div class="temoignage-full-card__stars">★★★★★</div>
+        <p class="temoignage-full-card__text">"J'ai cherché un élevage sérieux pendant 8 mois. Les Cimes Blanches se distinguent par la transparence : on peut voir les parents, les carnets de santé, les tests génétiques. Rien de caché. Bijou est parfaite."</p>
+        <div class="temoignage-full-card__footer">
+          <div class="temoignage-full-card__avatar">👩</div>
+          <div class="temoignage-full-card__info"><strong>Nathalie M.</strong><span>Fribourg · Bijou, Pomeranian femelle</span></div>
+        </div>
+      </div>
+
+      <div class="temoignage-full-card">
+        <span class="temoignage-full-card__race">Pomsky F2</span>
+        <div class="temoignage-full-card__stars">★★★★★</div>
+        <p class="temoignage-full-card__text">"Je voulais un Pomsky F2 taille "mini" — la propriétaire a pris le temps de m'expliquer les générations, les probabilités, sans jamais me forcer à un achat. Blizzard a 6 mois maintenant, il pèse 7kg et c'est un bonheur absolu."</p>
+        <div class="temoignage-full-card__footer">
+          <div class="temoignage-full-card__avatar">👩</div>
+          <div class="temoignage-full-card__info"><strong>Aurélie P.</strong><span>Lyon, France · Blizzard, Pomsky F2 mâle</span></div>
+        </div>
+      </div>
+
+      <div class="temoignage-full-card">
+        <span class="temoignage-full-card__race">Husky</span>
+        <div class="temoignage-full-card__stars">★★★★★</div>
+        <p class="temoignage-full-card__text">"On n'avait jamais eu de Husky. L'éleveuse a été honnête sur les exigences de la race : exercice, espace, solitude difficile. Elle nous a aidés à nous préparer vraiment. Un an plus tard, Shadow court avec nous chaque matin."</p>
+        <div class="temoignage-full-card__footer">
+          <div class="temoignage-full-card__avatar">🧑</div>
+          <div class="temoignage-full-card__info"><strong>Thomas & Léa B.</strong><span>Montreux · Shadow, Husky mâle</span></div>
+        </div>
+      </div>
+
+      <div class="temoignage-full-card">
+        <span class="temoignage-full-card__race">Pomsky</span>
+        <div class="temoignage-full-card__stars">★★★★★</div>
+        <p class="temoignage-full-card__text">"Adopter une chienne dans un autre pays (je suis à Annecy) peut être stressant. Tout s'est passé simplement — la remise à la frontière était organisée, le carnet européen en règle. Luna s'est adaptée en 48h."</p>
+        <div class="temoignage-full-card__footer">
+          <div class="temoignage-full-card__avatar">👩</div>
+          <div class="temoignage-full-card__info"><strong>Camille D.</strong><span>Annecy, France · Luna, Pomsky femelle</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter-section">
+  <div class="container">
+    <h2 class="section__title">Rejoignez notre communauté</h2>
+    <p>Nouvelles portées, actualités de l'élevage — directement dans votre boîte mail.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="votre@email.ch" required autocomplete="email">
+      <button type="submit">M'inscrire</button>
+    </form>
+  </div>
+</section>
+
+<footer><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="nav__logo">Élevage des Cimes Blanches<span>Sierre · Valais · Suisse</span></div><p>Élevage familial de Pomsky, Pomeranian et Husky sibérien dans les Alpes valaisannes.</p></div><div class="footer-col"><h4>L'élevage</h4><ul><li><a href="elevage.html">Notre histoire</a></li><li><a href="races-pomsky.html">Le Pomsky</a></li><li><a href="races-pomeranian.html">Le Pomeranian</a></li><li><a href="races-husky.html">Le Husky</a></li></ul></div><div class="footer-col"><h4>Informations</h4><ul><li><a href="chiots-disponibles.html">Chiots disponibles</a></li><li><a href="adoption.html">Processus d'adoption</a></li><li><a href="faq.html">FAQ</a></li><li><a href="temoignages.html">Témoignages</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Nous écrire</a></li><li><a href="mailto:contact@cimesblanches.ch">contact@cimesblanches.ch</a></li></ul></div></div><div class="footer-bottom"><span>© 2025 Élevage des Cimes Blanches · Sierre, Valais</span><span>Site par <a href="https://goodwebsites.ch" style="color:var(--or)">GoodWebsites.ch</a></span></div></div></footer>
+<script src="js/main.js"></script>
+</body></html>
