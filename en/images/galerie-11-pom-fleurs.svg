@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="600" viewBox="0 0 500 600">
+  <rect width="500" height="600" fill="#E8BF6A" opacity="0.15"/>
+  <rect width="500" height="600" fill="none" stroke="#E8BF6A" stroke-width="2" opacity="0.4"/>
+  <!-- Paw icon -->
+  <ellipse cx="250" cy="260" rx="35" ry="45" fill="#E8BF6A" opacity="0.35"/>
+  <ellipse cx="205" cy="230" rx="18" ry="22" fill="#E8BF6A" opacity="0.35"/>
+  <ellipse cx="235" cy="215" rx="18" ry="22" fill="#E8BF6A" opacity="0.35"/>
+  <ellipse cx="270" cy="215" rx="18" ry="22" fill="#E8BF6A" opacity="0.35"/>
+  <ellipse cx="298" cy="232" rx="18" ry="22" fill="#E8BF6A" opacity="0.35"/>
+  <!-- Label -->
+  <text x="250" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#E8BF6A" opacity="0.8">Galerie 11 · Pom fleurs</text>
+  <text x="250" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666" opacity="0.7">📐 500 × 600 px</text>
+  <text x="250" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999" opacity="0.6">galerie-11-pom-fleurs.jpg</text>
+</svg>

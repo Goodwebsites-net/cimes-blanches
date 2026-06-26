@@ -1,0 +1,100 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images
+public_folder: images
+
+locale: fr
+
+collections:
+  # ── Annonces ticker accueil ──
+  - name: annonces
+    label: "📢 Annonces (bandeau accueil)"
+    files:
+      - label: "Annonces du bandeau"
+        name: annonces
+        file: "_data/annonces.json"
+        fields:
+          - label: "Annonces"
+            name: items
+            widget: list
+            fields:
+              - { label: "Texte de l'annonce", name: texte, widget: string }
+              - { label: "Actif", name: actif, widget: boolean, default: true }
+
+  # ── Chiots disponibles ──
+  - name: chiots
+    label: "🐾 Chiots disponibles"
+    folder: "_chiots"
+    create: true
+    slug: "{{nom}}"
+    fields:
+      - { label: "Nom du chiot", name: nom, widget: string }
+      - label: "Race"
+        name: race
+        widget: select
+        options: ["Pomsky F1", "Pomsky F2", "Pomsky F3", "Pomeranian", "Husky Sibérien"]
+      - label: "Sexe"
+        name: sexe
+        widget: select
+        options: ["Mâle", "Femelle"]
+      - { label: "Âge (semaines)", name: age, widget: number }
+      - label: "Statut"
+        name: statut
+        widget: select
+        options: ["Disponible", "Réservé", "Adopté"]
+        default: "Disponible"
+      - { label: "Prix (CHF)", name: prix, widget: number }
+      - { label: "Photo principale", name: photo, widget: image }
+      - { label: "Description", name: description, widget: text, required: false }
+      - { label: "Date de naissance", name: date_naissance, widget: date, required: false }
+
+  # ── Galerie photos ──
+  - name: galerie
+    label: "📸 Galerie photos"
+    files:
+      - label: "Photos de la galerie"
+        name: galerie
+        file: "_data/galerie.json"
+        fields:
+          - label: "Photos"
+            name: photos
+            widget: list
+            fields:
+              - { label: "Fichier image", name: image, widget: image }
+              - { label: "Légende", name: legende, widget: string }
+              - label: "Catégorie"
+                name: categorie
+                widget: select
+                options: ["chiots", "pomsky", "pomeranian", "husky", "famille", "nature"]
+              - { label: "Afficher", name: actif, widget: boolean, default: true }
+
+  # ── Témoignages ──
+  - name: temoignages
+    label: "💬 Témoignages"
+    folder: "_temoignages"
+    create: true
+    slug: "{{famille}}"
+    fields:
+      - { label: "Nom famille / personne", name: famille, widget: string }
+      - { label: "Ville", name: ville, widget: string }
+      - { label: "Chiot adopté", name: chiot, widget: string }
+      - { label: "Témoignage", name: temoignage, widget: text }
+      - { label: "Afficher sur le site", name: actif, widget: boolean, default: true }
+      - { label: "Photo (optionnel)", name: photo, widget: image, required: false }
+
+  # ── Paramètres du site ──
+  - name: parametres
+    label: "⚙️ Paramètres"
+    files:
+      - label: "Infos générales"
+        name: infos
+        file: "_data/infos.json"
+        fields:
+          - { label: "Nom de l'élevage", name: nom_elevage, widget: string }
+          - { label: "Téléphone", name: telephone, widget: string }
+          - { label: "E-mail", name: email, widget: string }
+          - { label: "Adresse", name: adresse, widget: string }
+          - { label: "Instagram URL", name: instagram, widget: string, required: false }
+          - { label: "Facebook URL", name: facebook, widget: string, required: false }
