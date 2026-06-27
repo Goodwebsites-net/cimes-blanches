@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+lang: fr
+title: "Contact — Élevage des Cimes Blanches · Sierre Valais Suisse"
+description: "Contactez l'Élevage des Cimes Blanches à Sierre, Valais. Questions sur nos chiots Pomsky, Pomeranian et Husky. Réponse sous 24h."
+permalink: "/contact.html"
+hreflang_fr: "/contact.html"
+hreflang_en: "/en/contact.html"
+---
+<div class="page-hero">
+  <p class="page-hero__label">Nous écrire</p>
+  <h1 class="page-hero__title">Prenons <em style="font-style:italic;color:var(--or)">contact</em></h1>
+  <p class="page-hero__desc">Une question, une réservation, une visite ? Nous répondons sous 24h, 7j/7.</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <h2 class="section__title" style="font-size:1.8rem;margin-bottom:2rem">Nos coordonnées</h2>
+        <div class="contact-detail"><div class="contact-detail__icon">📍</div><div class="contact-detail__text"><strong>Adresse</strong>{{ site.adresse }}</div></div>
+        <div class="contact-detail"><div class="contact-detail__icon">📞</div><div class="contact-detail__text"><strong>Téléphone / WhatsApp</strong><a href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a><br><small>{{ site.horaires_fr }}</small></div></div>
+        <div class="contact-detail"><div class="contact-detail__icon">✉️</div><div class="contact-detail__text"><strong>Email</strong><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><small>Réponse sous 24h</small></div></div>
+        <div class="contact-detail"><div class="contact-detail__icon">🕐</div><div class="contact-detail__text"><strong>Visites sur rendez-vous</strong>Lundi – Samedi · 10h–17h<br><small>Merci de ne pas venir à l'improviste</small></div></div>
+        <div style="margin-top:2.5rem;padding:1.5rem;background:var(--gris-clair);border-radius:var(--radius)">
+          <p style="font-size:.85rem;color:var(--gris);line-height:1.7"><strong style="color:var(--noir)">Consultez d'abord notre FAQ</strong><br>Prix, délais, étapes d'adoption — beaucoup de réponses y sont déjà.</p>
+          <a href="/faq.html" style="display:inline-block;margin-top:.8rem;font-size:.78rem;color:var(--or);text-decoration:underline">Lire la FAQ →</a>
+        </div>
+      </div>
+      <div>
+        <h2 class="section__title" style="font-size:1.8rem;margin-bottom:2rem">Envoyer un message</h2>
+        <form class="contact-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="first">Prénom *</label><input type="text" id="first" name="prenom" required placeholder="Marie"></div>
+            <div class="form-group"><label for="last">Nom *</label><input type="text" id="last" name="nom" required placeholder="Dupont"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required placeholder="marie@example.com"></div>
+            <div class="form-group"><label for="phone">Téléphone</label><input type="tel" id="phone" name="telephone" placeholder="+41 79 XXX XX XX"></div>
+          </div>
+          <div class="form-group"><label for="subject">Sujet *</label><select id="subject" name="sujet" required><option value="">Choisir un sujet…</option><option>Réservation d'un chiot</option><option>Liste d'attente</option><option>Organiser une visite</option><option>Question sur une race</option><option>Question post-adoption</option><option>Autre</option></select></div>
+          <div class="form-group"><label for="breed">Race qui vous intéresse</label><select id="breed" name="race"><option value="">Indécis·e / ouvert·e</option><option>Pomsky F1</option><option>Pomsky F2/F3</option><option>Pomeranian</option><option>Husky Sibérien</option></select></div>
+          <div class="form-group"><label for="message">Votre message *</label><textarea id="message" name="message" required placeholder="Parlez-nous de votre projet, votre situation familiale, ce que vous recherchez…"></textarea></div>
+          <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.5rem"><input type="checkbox" id="gdpr" required style="width:16px;height:16px;accent-color:var(--or)"><label for="gdpr" style="font-size:.8rem;color:var(--gris);text-transform:none;letter-spacing:0">J'accepte que mes données soient utilisées pour répondre à ma demande (RGPD)</label></div>
+          <input type="hidden" name="_subject" value="Nouveau message — {{ site.nom }}">
+          <input type="text" name="_gotcha" style="display:none">
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;margin-top:.5rem">Envoyer mon message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

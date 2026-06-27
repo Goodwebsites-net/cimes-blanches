@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Contact — Cimes Blanches Kennel · Sierre Valais Switzerland"
+description: "Contact Cimes Blanches Kennel in Sierre, Valais Switzerland. Questions about our Pomsky, Pomeranian and Husky puppies. Reply within 24h."
+permalink: "/en/contact.html"
+hreflang_fr: "/contact.html"
+hreflang_en: "/en/contact.html"
+---
+<div class="page-hero">
+  <p class="page-hero__label">Get in touch</p>
+  <h1 class="page-hero__title">Let's <em style="font-style:italic;color:var(--or)">connect</em></h1>
+  <p class="page-hero__desc">A question, a reservation, a visit? We reply within 24 hours, 7 days a week.</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <h2 class="section__title" style="font-size:1.8rem;margin-bottom:2rem">Our details</h2>
+        <div class="contact-detail"><div class="contact-detail__icon">📍</div><div class="contact-detail__text"><strong>Address</strong>{{ site.adresse }}</div></div>
+        <div class="contact-detail"><div class="contact-detail__icon">📞</div><div class="contact-detail__text"><strong>Phone / WhatsApp</strong><a href="tel:{{ site.telephone_lien }}">{{ site.telephone }}</a><br><small>{{ site.horaires_en }}</small></div></div>
+        <div class="contact-detail"><div class="contact-detail__icon">✉️</div><div class="contact-detail__text"><strong>Email</strong><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><small>Reply within 24h</small></div></div>
+        <div class="contact-detail"><div class="contact-detail__icon">🕐</div><div class="contact-detail__text"><strong>Visits by appointment</strong>Monday – Saturday · 10am–5pm<br><small>Please do not arrive unannounced</small></div></div>
+        <div style="margin-top:2.5rem;padding:1.5rem;background:var(--gris-clair);border-radius:var(--radius)">
+          <p style="font-size:.85rem;color:var(--gris);line-height:1.7"><strong style="color:var(--noir)">Check our FAQ first</strong><br>Prices, timelines, adoption steps — many answers are already there.</p>
+          <a href="faq.html" style="display:inline-block;margin-top:.8rem;font-size:.78rem;color:var(--or);text-decoration:underline">Read the FAQ →</a>
+        </div>
+      </div>
+      <div>
+        <h2 class="section__title" style="font-size:1.8rem;margin-bottom:2rem">Send a message</h2>
+        <form class="contact-form" action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="first">First name *</label><input type="text" id="first" name="first_name" required placeholder="Marie"></div>
+            <div class="form-group"><label for="last">Last name *</label><input type="text" id="last" name="last_name" required placeholder="Dupont"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required placeholder="marie@example.com"></div>
+            <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="+41 79 XXX XX XX"></div>
+          </div>
+          <div class="form-group"><label for="subject">Subject *</label><select id="subject" name="subject" required><option value="">Choose a subject…</option><option>Puppy reservation</option><option>Waiting list</option><option>Arrange a visit</option><option>Breed enquiry</option><option>Post-adoption question</option><option>Other</option></select></div>
+          <div class="form-group"><label for="breed">Breed of interest</label><select id="breed" name="breed"><option value="">Undecided / open</option><option>Pomsky F1</option><option>Pomsky F2/F3</option><option>Pomeranian</option><option>Siberian Husky</option></select></div>
+          <div class="form-group"><label for="message">Your message *</label><textarea id="message" name="message" required placeholder="Tell us about your project, family situation, and what you're looking for…"></textarea></div>
+          <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.5rem"><input type="checkbox" id="gdpr" required style="width:16px;height:16px;accent-color:var(--or)"><label for="gdpr" style="font-size:.8rem;color:var(--gris);text-transform:none;letter-spacing:0">I consent to my data being used to respond to my enquiry (GDPR)</label></div>
+          <input type="hidden" name="_subject" value="New message — {{ site.nom }}">
+          <input type="text" name="_gotcha" style="display:none">
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;margin-top:.5rem">Send my message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

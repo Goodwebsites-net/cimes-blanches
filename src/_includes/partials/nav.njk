@@ -1,0 +1,59 @@
+{%- set L = lang or "fr" -%}
+{%- set home = "/" if L == "fr" else "index.html" -%}
+<nav class="nav" role="navigation">
+  <a href="{{ home }}" class="nav__logo">{{ site.nom }}<span>{{ site.localite }}</span></a>
+  {% if L == "fr" %}
+  <ul class="nav__links" role="list">
+    <li><a href="/elevage.html">L'élevage</a></li>
+    <li><a href="/races-pomsky.html">Les races</a></li>
+    <li><a href="/chiots-disponibles.html">Chiots dispos</a></li>
+    <li><a href="/galerie.html">Galerie</a></li>
+    <li><a href="/conseils.html">Conseils</a></li>
+    <li><a href="/faq.html">FAQ</a></li>
+    <li><a href="/contact.html" class="nav__cta">Nous contacter</a></li>
+  </ul>
+  {% else %}
+  <ul class="nav__links" role="list">
+    <li><a href="about.html">Our Kennel</a></li>
+    <li><a href="breeds-pomsky.html">The Breeds</a></li>
+    <li><a href="puppies-available.html">Available Puppies</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="advice.html">Puppy Care</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav__cta">Contact Us</a></li>
+  </ul>
+  {% endif %}
+  <div class="lang-switcher">
+    <a href="{{ hreflang_fr }}" class="{{ 'active' if L == 'fr' }}">FR</a>
+    <span>|</span>
+    <a href="{{ hreflang_en }}" class="{{ 'active' if L == 'en' }}">EN</a>
+  </div>
+  <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="nav__mobile" role="dialog">
+  <button class="nav__mobile__close" aria-label="Fermer">✕</button>
+  {% if L == "fr" %}
+  <a href="/elevage.html">L'élevage</a>
+  <a href="/races-pomsky.html">Les races</a>
+  <a href="/chiots-disponibles.html">Chiots disponibles</a>
+  <a href="/galerie.html">Galerie</a>
+  <a href="/conseils.html">Conseils</a>
+  <a href="/faq.html">FAQ</a>
+  <a href="/temoignages.html">Témoignages</a>
+  <a href="/contact.html">Contact</a>
+  {% else %}
+  <a href="about.html">Our Kennel</a>
+  <a href="breeds-pomsky.html">The Breeds</a>
+  <a href="puppies-available.html">Available Puppies</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="advice.html">Puppy Care</a>
+  <a href="faq.html">FAQ</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="contact.html">Contact</a>
+  {% endif %}
+  <div class="lang-mobile">
+    <a href="{{ hreflang_fr }}" class="{{ 'active' if L == 'fr' }}">🇫🇷 Français</a>
+    <a href="{{ hreflang_en }}" class="{{ 'active' if L == 'en' }}">🇬🇧 English</a>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+# Dependances
+node_modules/
+
+# Build genere (Netlify le reconstruit a chaque push)
+_site/
+
+# Systeme
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+.netlify/

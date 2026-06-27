@@ -1,0 +1,141 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Les images televersees via le CMS vont dans src/images, servies a la racine /images
+media_folder: "src/images"
+public_folder: "/images"
+
+# Langue de l'interface
+locale: "fr"
+
+collections:
+  # ─────────────────────────────────────────────────────────────
+  # CHIOTS DISPONIBLES — une fiche par chiot
+  # ─────────────────────────────────────────────────────────────
+  - name: "chiots"
+    label: "🐾 Chiots disponibles"
+    label_singular: "chiot"
+    folder: "src/chiots"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{nom}} — {{sous_titre_fr}} ({{statut}})"
+    sortable_fields: ["ordre", "nom", "prix"]
+    fields:
+      - { name: "nom", label: "Nom du chiot", widget: "string" }
+      - name: "race"
+        label: "Race"
+        widget: "select"
+        options:
+          - { label: "Pomsky", value: "pomsky" }
+          - { label: "Pomeranian", value: "pomeranian" }
+          - { label: "Husky", value: "husky" }
+      - { name: "sous_titre_fr", label: "Sous-titre FR (ex: Pomsky F1 · Femelle)", widget: "string" }
+      - { name: "sous_titre_en", label: "Sous-titre EN (ex: Pomsky F1 · Female)", widget: "string" }
+      - { name: "age_fr", label: "Âge FR (ex: 12 semaines)", widget: "string" }
+      - { name: "age_en", label: "Âge EN (ex: 12 weeks)", widget: "string" }
+      - name: "statut"
+        label: "Statut"
+        widget: "select"
+        options:
+          - { label: "Disponible", value: "disponible" }
+          - { label: "Réservé(e)", value: "reserve" }
+      - { name: "prix", label: "Prix (CHF, chiffres seulement)", widget: "number", value_type: "int", min: 0 }
+      - { name: "photo", label: "Photo principale", widget: "image", choose_url: true, required: false }
+      - { name: "atouts_fr", label: "Atouts FR (une ligne = une puce)", widget: "text" }
+      - { name: "atouts_en", label: "Atouts EN (one line = one bullet)", widget: "text" }
+      - { name: "ordre", label: "Ordre d'affichage", widget: "number", value_type: "int", default: 99 }
+
+  # ─────────────────────────────────────────────────────────────
+  # GALERIE — une fiche par photo
+  # ─────────────────────────────────────────────────────────────
+  - name: "galerie"
+    label: "🖼️ Galerie photos"
+    label_singular: "photo"
+    folder: "src/galerie"
+    create: true
+    delete: true
+    slug: "photo-{{ordre}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{legende_fr}}"
+    sortable_fields: ["ordre"]
+    fields:
+      - { name: "image", label: "Image", widget: "image", choose_url: true }
+      - { name: "legende_fr", label: "Légende FR", widget: "string" }
+      - { name: "legende_en", label: "Légende EN", widget: "string" }
+      - name: "categorie"
+        label: "Catégories (pour les filtres, séparées par un espace)"
+        widget: "string"
+        hint: "Valeurs possibles : chiots, pomsky, pomeranian, husky, famille, nature. Ex: chiots pomsky"
+      - { name: "ordre", label: "Ordre d'affichage", widget: "number", value_type: "int", default: 99 }
+
+  # ─────────────────────────────────────────────────────────────
+  # TEMOIGNAGES — un avis par fiche
+  # ─────────────────────────────────────────────────────────────
+  - name: "temoignages"
+    label: "💬 Témoignages"
+    label_singular: "témoignage"
+    folder: "src/temoignages"
+    create: true
+    delete: true
+    slug: "temoignage-{{ordre}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    summary: "{{nom}} ({{ville}})"
+    sortable_fields: ["ordre"]
+    fields:
+      - { name: "nom", label: "Nom de la famille", widget: "string" }
+      - { name: "ville", label: "Ville", widget: "string" }
+      - { name: "chien_fr", label: "Chien FR (ex: Milo, Pomsky mâle)", widget: "string" }
+      - { name: "chien_en", label: "Chien EN (ex: Milo, male Pomsky)", widget: "string" }
+      - name: "race"
+        label: "Race (badge)"
+        widget: "select"
+        options:
+          - { label: "Pomsky", value: "pomsky" }
+          - { label: "Pomeranian", value: "pomeranian" }
+          - { label: "Husky", value: "husky" }
+      - { name: "etoiles", label: "Étoiles (1 à 5)", widget: "number", value_type: "int", min: 1, max: 5, default: 5 }
+      - { name: "texte_fr", label: "Témoignage FR", widget: "text" }
+      - { name: "texte_en", label: "Témoignage EN", widget: "text" }
+      - { name: "ordre", label: "Ordre d'affichage", widget: "number", value_type: "int", default: 99 }
+
+  # ─────────────────────────────────────────────────────────────
+  # ANNONCES BANDEAU + PARAMETRES (fichiers uniques)
+  # ─────────────────────────────────────────────────────────────
+  - name: "reglages"
+    label: "⚙️ Réglages du site"
+    files:
+      - name: "annonces"
+        label: "📢 Annonces (bandeau défilant)"
+        file: "src/_data/annonces.json"
+        fields:
+          - name: "messages"
+            label: "Messages défilants"
+            widget: "list"
+            fields:
+              - { name: "texte_fr", label: "Texte FR", widget: "string" }
+              - { name: "texte_en", label: "Texte EN", widget: "string" }
+
+      - name: "parametres"
+        label: "🏷️ Coordonnées & paramètres"
+        file: "src/_data/site.json"
+        fields:
+          - { name: "nom", label: "Nom de l'élevage", widget: "string" }
+          - { name: "localite", label: "Localité (sous le logo)", widget: "string" }
+          - { name: "tagline_fr", label: "Slogan FR", widget: "string" }
+          - { name: "tagline_en", label: "Slogan EN", widget: "string" }
+          - { name: "telephone", label: "Téléphone (affiché)", widget: "string" }
+          - { name: "telephone_lien", label: "Téléphone (format lien, ex: +41791234567)", widget: "string" }
+          - { name: "email", label: "Email", widget: "string" }
+          - { name: "instagram", label: "Lien Instagram", widget: "string", required: false }
+          - { name: "whatsapp", label: "WhatsApp", widget: "string", required: false }
+          - { name: "adresse", label: "Adresse complète", widget: "string" }
+          - { name: "horaires_fr", label: "Horaires FR", widget: "string" }
+          - { name: "horaires_en", label: "Horaires EN", widget: "string" }
+          - { name: "formspree_id", label: "ID Formspree (formulaire contact)", widget: "string" }
+          - { name: "domaine", label: "Nom de domaine", widget: "string" }

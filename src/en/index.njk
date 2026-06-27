@@ -1,0 +1,120 @@
+---
+layout: layouts/base.njk
+lang: en
+title: "Cimes Blanches Kennel — Pomsky, Pomeranian & Husky — Sierre, Valais Switzerland"
+description: "Family kennel breeding Pomsky, Pomeranian and Siberian Husky in the Swiss Alps, Sierre Valais. FCI pedigree puppies, health-tested parents. Adoption by reservation."
+keywords: "Pomsky breeder Switzerland, Pomeranian puppies Valais, Husky kennel Swiss Alps, puppy adoption Switzerland"
+permalink: "/en/index.html"
+hreflang_fr: "/index.html"
+hreflang_en: "/en/index.html"
+---
+<div class="annonces-ticker" aria-live="polite">
+  <span class="annonces-ticker__inner">
+    {% for m in annonces.messages %}{{ m.texte_en }}<span class="annonces-ticker__sep">✦</span>{% endfor %}{% for m in annonces.messages %}{{ m.texte_en }}<span class="annonces-ticker__sep">✦</span>{% endfor %}
+  </span>
+</div>
+
+<section class="hero" aria-label="Introduction">
+  <div class="hero__left">
+    <p class="hero__eyebrow">{{ site.tagline_en }}</p>
+    <h1 class="hero__title">Wild souls<br><em>tamed</em><br>with love</h1>
+    <p class="hero__desc">Nestled in the Swiss Alps, we breed exceptional Pomsky, Pomeranian and Siberian Huskies — every puppy is born here, raised with us, and leaves for good.</p>
+    <div class="hero__actions">
+      <a href="puppies-available.html" class="btn-primary">See Available Puppies →</a>
+      <a href="about.html" class="btn-secondary">Our Story</a>
+    </div>
+  </div>
+  <div class="hero__right">
+    <img src="/images/hero-pomsky-neige.svg" alt="Pomsky in the Valais snow" class="hero__img" loading="eager">
+    <div class="hero__img-overlay"></div>
+  </div>
+</section>
+
+<section class="section section--tinted">
+  <div class="container">
+    <div class="stats-row reveal">
+      <div class="stat-item"><div class="stat-item__number">10+</div><div class="stat-item__label">Years of breeding</div></div>
+      <div class="stat-item"><div class="stat-item__number">200+</div><div class="stat-item__label">Puppies adopted</div></div>
+      <div class="stat-item"><div class="stat-item__number">3</div><div class="stat-item__label">Exceptional breeds</div></div>
+      <div class="stat-item"><div class="stat-item__number">100%</div><div class="stat-item__label">FCI pedigree</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="section__label reveal">Our breeds</p>
+    <h2 class="section__title reveal">Three characters,<br>one shared passion</h2>
+    <p class="section__subtitle reveal">From the fiery orange Pomeranian to the ice-eyed wolf of the snows — each breed carries its own magic.</p>
+    <div class="races-grid reveal">
+      <div class="race-card"><img src="/images/race-pomsky-portrait.svg" alt="Blue-eyed Pomsky"><div class="race-card__overlay"><span class="race-card__label">Nordic Crossbreed</span><h3 class="race-card__name">Pomsky</h3><p class="race-card__desc">The perfect blend of Pomeranian and Husky — intelligence, beauty and playful temperament in a compact size.</p><a href="breeds-pomsky.html" class="race-card__link">Discover the breed →</a></div></div>
+      <div class="race-card"><img src="/images/race-pomeranian-portrait.svg" alt="Smiling orange Pomeranian"><div class="race-card__overlay"><span class="race-card__label">Spitz dwarf</span><h3 class="race-card__name">Pomeranian</h3><p class="race-card__desc">The little lion with a sumptuous coat and a fierce personality — pure energy and elegance in a tiny package.</p><a href="breeds-pomeranian.html" class="race-card__link">Discover the breed →</a></div></div>
+      <div class="race-card"><img src="/images/race-husky-portrait.svg" alt="Blue-eyed Siberian Husky"><div class="race-card__overlay"><span class="race-card__label">Nordic Spitz</span><h3 class="race-card__name">Siberian Husky</h3><p class="race-card__desc">The snow nomad — loyal and free-spirited. A piercing gaze, a wild soul, made for active family life.</p><a href="breeds-husky.html" class="race-card__link">Discover the breed →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <p class="section__label reveal">Ready to adopt</p>
+    <h2 class="section__title reveal">Available Puppies</h2>
+    <p class="section__subtitle reveal">Each puppy leaves with their FCI pedigree, health record, vaccines, microchip and a welcome kit.</p>
+    <div class="chiots-grid reveal">
+      {% for chiot in collections.chiots | limite(3) %}
+      <div class="chiot-card">
+        <div class="chiot-card__img"><img src="{{ chiot.data.photo }}" alt="{{ chiot.data.nom }} — {{ chiot.data.sous_titre_en }}" loading="lazy"></div>
+        <div class="chiot-card__body">
+          {% if chiot.data.statut == "disponible" %}<span class="chiot-card__badge badge--dispo">Available</span>{% else %}<span class="chiot-card__badge badge--reserve">Reserved</span>{% endif %}
+          <h3 class="chiot-card__name">{{ chiot.data.nom }}</h3>
+          <div class="chiot-card__meta"><span>{{ chiot.data.sous_titre_en }}</span><span>{{ chiot.data.age_en }}</span></div>
+          <div class="chiot-card__price">CHF {{ chiot.data.prix | prixCH }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:3rem"><a href="puppies-available.html" class="btn-primary">View All Puppies →</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="text-align:center">
+    <p class="section__label reveal" style="justify-content:center">Happy families</p>
+    <h2 class="section__title reveal">What our families say</h2>
+    <div class="temoignages-slider reveal">
+      {% for t in collections.temoignages | limite(4) %}
+      <div class="temoignage-card">
+        <p class="temoignage-card__quote">{{ t.data.texte_en }}</p>
+        <div class="temoignage-card__author"><strong>{{ t.data.nom }}</strong>{{ t.data.ville }}<div class="temoignage-card__dog">🐾 {{ t.data.chien_en }}</div></div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="temoignage-nav">
+      {% for t in collections.temoignages | limite(4) %}<button class="temoignage-dot {{ 'active' if loop.first }}" aria-label="Testimonial {{ loop.index }}"></button>{% endfor %}
+    </div>
+    <div style="margin-top:2.5rem"><a href="testimonials.html" class="btn-secondary">All Testimonials</a></div>
+  </div>
+</section>
+
+<section class="section section--tinted">
+  <div class="container">
+    <p class="section__label reveal">Behind the scenes</p>
+    <h2 class="section__title reveal">Life at the kennel</h2>
+    <div class="gallery-grid reveal">
+      {% for photo in collections.galerie | limite(8) %}
+      <div class="gallery-item"><img src="{{ photo.data.image }}" alt="{{ photo.data.legende_en }}"><div class="gallery-item__caption">{{ photo.data.legende_en }}</div></div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center;margin-top:2.5rem"><a href="gallery.html" class="btn-primary">View All 30 Photos →</a></div>
+  </div>
+</section>
+
+<section class="newsletter-section">
+  <div class="container">
+    <h2 class="section__title">Be the first to know</h2>
+    <p>New litters, open house events, exclusive tips — straight to your inbox.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="your@email.com" required autocomplete="email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>

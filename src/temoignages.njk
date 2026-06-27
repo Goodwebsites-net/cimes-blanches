@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+lang: fr
+title: "Témoignages — Familles heureuses — Élevage des Cimes Blanches"
+description: "Avis et témoignages des familles ayant adopté un Pomsky, Pomeranian ou Husky à l'Élevage des Cimes Blanches, Sierre Valais."
+permalink: "/temoignages.html"
+hreflang_fr: "/temoignages.html"
+hreflang_en: "/en/testimonials.html"
+---
+<style>
+.temoignages-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:2rem;margin-top:3rem}
+.temoignage-full-card{background:white;border:1px solid var(--gris-clair);border-radius:var(--radius);padding:2rem;position:relative;transition:box-shadow .3s}
+.temoignage-full-card:hover{box-shadow:0 12px 40px rgba(26,26,24,.08)}
+.temoignage-full-card__stars{color:var(--or);font-size:1rem;margin-bottom:1rem;letter-spacing:.1em}
+.temoignage-full-card__text{font-family:var(--serif);font-size:1.05rem;font-weight:300;font-style:italic;line-height:1.7;color:var(--noir);margin-bottom:1.5rem}
+.temoignage-full-card__footer{display:flex;align-items:center;gap:1rem;padding-top:1rem;border-top:1px solid var(--gris-clair)}
+.temoignage-full-card__avatar{width:42px;height:42px;border-radius:50%;background:var(--gris-clair);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.temoignage-full-card__info strong{display:block;font-size:.85rem;font-weight:500;color:var(--noir)}
+.temoignage-full-card__info span{font-size:.78rem;color:var(--gris)}
+.temoignage-full-card__race{position:absolute;top:1.2rem;right:1.2rem;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or);background:rgba(201,168,76,.1);padding:.2rem .6rem;border-radius:10px}
+@media(max-width:600px){.temoignages-grid{grid-template-columns:1fr}}
+</style>
+
+<div class="page-hero">
+  <p class="page-hero__label">Ils nous font confiance</p>
+  <h1 class="page-hero__title">Familles <em style="font-style:italic;color:var(--or)">heureuses</em></h1>
+  <p class="page-hero__desc">Plus de 200 familles ont adopté un chiot des Cimes Blanches. Quelques-unes ont pris la plume pour nous.</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="stats-row reveal">
+      <div class="stat-item"><div class="stat-item__number">200+</div><div class="stat-item__label">Adoptions réussies</div></div>
+      <div class="stat-item"><div class="stat-item__number">4.9/5</div><div class="stat-item__label">Note moyenne</div></div>
+      <div class="stat-item"><div class="stat-item__number">10+</div><div class="stat-item__label">Années d'expérience</div></div>
+      <div class="stat-item"><div class="stat-item__number">CH · FR</div><div class="stat-item__label">Familles en Suisse & France</div></div>
+    </div>
+    <div class="temoignages-grid reveal">
+      {% for t in collections.temoignages %}
+      <div class="temoignage-full-card">
+        <span class="temoignage-full-card__race">{{ t.data.race | capitalize }}</span>
+        <div class="temoignage-full-card__stars">{{ t.data.etoiles | stars }}</div>
+        <p class="temoignage-full-card__text">{{ t.data.texte_fr }}</p>
+        <div class="temoignage-full-card__footer">
+          <div class="temoignage-full-card__avatar">🐾</div>
+          <div class="temoignage-full-card__info"><strong>{{ t.data.nom }}</strong><span>{{ t.data.ville }} · {{ t.data.chien_fr }}</span></div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="newsletter-section">
+  <div class="container">
+    <h2 class="section__title">Rejoignez notre communauté</h2>
+    <p>Nouvelles portées, actualités de l'élevage — directement dans votre boîte mail.</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="votre@email.ch" required autocomplete="email">
+      <button type="submit">M'inscrire</button>
+    </form>
+  </div>
+</section>

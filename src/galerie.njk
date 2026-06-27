@@ -1,0 +1,58 @@
+---
+layout: layouts/base.njk
+lang: fr
+title: "Galerie Photos — Pomsky, Pomeranian & Husky — Élevage des Cimes Blanches"
+description: "30 photos de nos chiots et chiens Pomsky, Pomeranian et Husky sibérien. La vie à l'Élevage des Cimes Blanches à Sierre, Valais."
+permalink: "/galerie.html"
+hreflang_fr: "/galerie.html"
+hreflang_en: "/en/gallery.html"
+---
+<style>
+.gallery-filters{display:flex;gap:.8rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.filter-btn{padding:.5rem 1.2rem;font-family:var(--sans);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--gris-clair);border-radius:20px;background:transparent;color:var(--gris);cursor:pointer;transition:all .2s}
+.filter-btn.active,.filter-btn:hover{border-color:var(--or);color:var(--or)}
+.gallery-grid{columns:4;column-gap:10px}
+@media(max-width:900px){.gallery-grid{columns:3}}
+@media(max-width:600px){.gallery-grid{columns:2}}
+</style>
+
+<div class="page-hero">
+  <p class="page-hero__label">Galerie</p>
+  <h1 class="page-hero__title">30 regards,<br><em style="font-style:italic;color:var(--or)">30 histoires</em></h1>
+  <p class="page-hero__desc">Des nouveau-nés aux adultes, des premières neiges aux adoptions — la vie aux Cimes Blanches en images.</p>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">Tout</button>
+      <button class="filter-btn" data-filter="chiots">🐾 Chiots</button>
+      <button class="filter-btn" data-filter="pomsky">Pomsky</button>
+      <button class="filter-btn" data-filter="pomeranian">Pomeranian</button>
+      <button class="filter-btn" data-filter="husky">Husky</button>
+      <button class="filter-btn" data-filter="famille">Familles</button>
+      <button class="filter-btn" data-filter="nature">Nature & Alpes</button>
+    </div>
+    <div class="gallery-grid reveal">
+      {% for photo in collections.galerie %}
+      <div class="gallery-item" data-cat="{{ photo.data.categorie }}">
+        <img src="{{ photo.data.image }}" alt="{{ photo.data.legende_fr }}">
+        <div class="gallery-item__caption">{{ photo.data.legende_fr }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.style.display = (f === 'all' || item.dataset.cat.includes(f)) ? '' : 'none';
+    });
+  });
+});
+</script>

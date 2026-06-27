@@ -1,0 +1,15 @@
+{
+  "name": "elevage-master-template",
+  "version": "1.0.0",
+  "description": "Template master GoodWebsites.ch — site vitrine bilingue pour eleveurs, editable via Decap CMS",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "dev": "eleventy --serve"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
