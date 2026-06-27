@@ -1,5 +1,5 @@
 ---
-image: /images/galerie-16-chiots-jeu.svg
+image: /images/galerie-16-chiots-jeu.jpg
 legende_fr: Récréation · 6 semaines
 legende_en: Playtime · 6 weeks
 categorie: chiots pomsky

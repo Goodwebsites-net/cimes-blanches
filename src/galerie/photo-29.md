@@ -1,5 +1,5 @@
 ---
-image: /images/galerie-29-husky-course.svg
+image: /images/galerie-29-husky-course.jpg
 legende_fr: Blizzard · Sprint matinal
 legende_en: Blizzard · Morning sprint
 categorie: husky

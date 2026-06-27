@@ -7,7 +7,7 @@ age_fr: 10 semaines
 age_en: 10 weeks
 statut: disponible
 prix: 2200
-photo: /images/race-husky-portrait.svg
+photo: /images/race-husky-portrait.jpg
 atouts_fr: |
   Robe noir et blanc, yeux bleus glace
   Vaccins DHPPiL, puce CH, vermifugé

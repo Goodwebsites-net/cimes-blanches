@@ -7,7 +7,7 @@ age_fr: 10 semaines
 age_en: 10 weeks
 statut: reserve
 prix: 2500
-photo: /images/chiot-neva-pomeranian.svg
+photo: /images/chiot-neva-pomeranian.jpg
 atouts_fr: |
   Robe orange sable, yeux ambrés
   Vaccins DHPPiL, puce CH, vermifugée

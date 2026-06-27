@@ -7,7 +7,7 @@ age_fr: 12 semaines
 age_en: 12 weeks
 statut: disponible
 prix: 2900
-photo: /images/chiot-luna-pomsky.svg
+photo: /images/chiot-luna-pomsky.jpg
 atouts_fr: |
   Robe argent et blanc, yeux bicolores
   Vaccins DHPPiL, puce CH, vermifugée

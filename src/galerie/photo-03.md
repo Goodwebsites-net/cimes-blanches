@@ -1,5 +1,5 @@
 ---
-image: /images/galerie-03-husky-neige.svg
+image: /images/galerie-03-husky-neige.jpg
 legende_fr: Arctic Jr · Premier hiver
 legende_en: Arctic Jr · First winter
 categorie: chiots husky

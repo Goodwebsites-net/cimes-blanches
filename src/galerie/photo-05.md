@@ -1,5 +1,5 @@
 ---
-image: /images/galerie-05-pomsky-yeux-bleus.svg
+image: /images/galerie-05-pomsky-yeux-bleus.jpg
 legende_fr: Le regard de Milo
 legende_en: Milo's gaze
 categorie: pomsky

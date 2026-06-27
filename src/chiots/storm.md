@@ -7,7 +7,7 @@ age_fr: 12 semaines
 age_en: 12 weeks
 statut: disponible
 prix: 2800
-photo: /images/chiot-storm-pomsky.svg
+photo: /images/chiot-storm-pomsky.jpg
 atouts_fr: |
   Robe gris charcoal et blanc, yeux bleus
   Vaccins DHPPiL, puce CH, vermifugé

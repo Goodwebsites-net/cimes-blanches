@@ -1,5 +1,5 @@
 ---
-image: /images/galerie-24-husky-lac-valais.svg
+image: /images/galerie-24-husky-lac-valais.jpg
 legende_fr: Lac de Géronde · Sierre
 legende_en: Lake Géronde · Sierre
 categorie: nature husky
