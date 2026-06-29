@@ -129,7 +129,7 @@ ul { list-style: none; }
 .hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 40fr 60fr;
+  grid-template-columns: 35fr 65fr;
   position: relative;
   overflow: hidden;
   padding-top: 80px;
@@ -987,9 +987,9 @@ footer {
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .hero { min-height: 100vh; }
-  .hero__left { padding: 7rem 2rem 3rem; max-width: 100%; }
-  .hero__right { position: absolute; inset: 0; }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 70px; }
+  .hero__right { position: relative; height: 60vw; order: -1; }
+  .hero__left { padding: 2.5rem 1.5rem 3rem; max-width: 100%; }
   .races-grid { grid-template-columns: 1fr 1fr; }
   .gallery-grid { columns: 3; }
   .stats-row { grid-template-columns: 2fr 2fr; }
