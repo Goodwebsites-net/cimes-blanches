@@ -7,7 +7,7 @@ age_fr: 8 semaines
 age_en: 8 weeks
 statut: reserve
 prix: 2800
-photo: /images/race-pomeranian-portrait.jpg
+photo: /images/race-pomeranian-portrait.webp
 atouts_fr: |
   Robe crème vanille, très rare
   Vaccins DHPPiL, puce CH, vermifugée

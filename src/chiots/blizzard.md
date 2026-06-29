@@ -7,7 +7,7 @@ age_fr: 9 semaines
 age_en: 9 weeks
 statut: disponible
 prix: 3100
-photo: /images/pomsky-adulte-assis.jpg
+photo: /images/pomsky-adulte-assis.webp
 atouts_fr: |
   Robe blanche pure, yeux bleu ciel
   Vaccins DHPPiL, puce CH, vermifugé

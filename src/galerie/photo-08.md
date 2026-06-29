@@ -1,5 +1,5 @@
 ---
-image: /images/galerie-08-pattes-chiots.jpg
+image: /images/galerie-08-pattes-chiots.webp
 legende_fr: Premières pattes · Portée de mars
 legende_en: First paws · March litter
 categorie: chiots

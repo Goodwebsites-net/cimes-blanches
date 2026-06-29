@@ -1,5 +1,5 @@
 ---
-image: /images/galerie-30-groupe-chiots.jpg
+image: /images/galerie-30-groupe-chiots.webp
 legende_fr: Famille recomposée · Portée mixte
 legende_en: Blended family · Mixed litter
 categorie: chiots
